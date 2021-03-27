@@ -1,5 +1,4 @@
-library(bugtractr)
 library(bugRzilla)
 
-bug <- list_bugs()
-head(bug)
+bugs <- get_bug(5)
+bugs

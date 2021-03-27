@@ -4,8 +4,8 @@ library(curl)
 
 test_that("desired_bugissue works", {
   vcr::use_cassette("desired_bug", {
-    bug_id <- sample(bug$id, 1)
-    t1 <- desired_bug(bug_id)
+    issue <- sample(1:1000, 1)
+    t1 <- desired_bug(issue)
   })
   expect_type(t1, "NULL")
 })

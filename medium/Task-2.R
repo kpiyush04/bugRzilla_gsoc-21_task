@@ -1,5 +1,4 @@
 # importing libraries 
-library(bugtractr)
 library(bugRzilla)
 
 # This is the function which will redirect the desired_bug to the browser
