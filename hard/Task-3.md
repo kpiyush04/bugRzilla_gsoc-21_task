@@ -1,13 +1,101 @@
 #### Task-3: Propose a plan (no need to provide code but it is welcomed as example, no need to run it) to analyze issues to learn how to make high quality issues: What questions would be interesting? How would you answer them? (Critical thinking and independence)
 
-> After perusing the documentation of bugRzilla, I might want to propose a few upgrades in the undertaking which are as per the following:
+ > Taking few parameters under-consideration that should be used to analyze issues to learn how to make high quality issues:
 
-1. In, **Bugzilla – Reporting and Charting Kitchen** the segment of:
-    1. **Current State** in the **duplicates** the button "Bug list" doesn't seems to be working. The main is to give the list of all issues. As well as there is mention "Please press Back and try again" the addition of back button is required.
-    2. **Current State** in the **Tabular reports** visualization option are given to extract the plots but they are not in development phase. So visualizations like bar graph, line graph should be developed.
-    3. **Change Over Time** the old charts just give a static view, as on various datasets for example new, assigned, reopened, and so on taking all things together of these the X-hub is marked distinctly with a date. To make it dynamic the zoom(in/out), time-series plots like at what time, the day the issues are raised, shut, etc, and so forth can from the chart one be redirected to the issue in an alternate tab.
+  1. **Installation**: Whenever one install a package, so at the very beginning the package throws an warning. Whenever someone tries to install the package due to some reason if the package gets broke so in that situation Exception handling arises. This can be done using tryCatch() function. 
+  
+  For example-
+          
+          try({
+          Message("Installation in Progress")
+          }), error = function(e){
+          Message("WARNING: installation failed.")
+          }
+  In this, if the package installs the successfully then it will throw the message "installation in Progress" but if somewhere package get breaks due to some lack of dependencies or some other reason then it should throw exception message i.e. "WARNING: installation failed."
+          
+  2. **Analysis**: For Analysis there should be a fault injection. In this basically two scenarios can be arise like:
+       
+        1. **No exception is thrown but all test cases will be passed.**
+            
+   For example-
+              
+           find_issue <- function(){
+              for (i in 1:7) {
+                skip_to_next <- FALSE
+                tryCatch({
+                  issue <- get_bug(i)
+                  g1 <- issue$id
+                  print(issue)
+                  message("The issue id's are: ",g1)
+                },
+                  error = function(e) {
+                    skip_to_next <<- TRUE
+                  }
+                )
+                if (skip_to_next) {
+                  next
+                }
+              }
+          }
+        find_issue()
+          
+  In this example the excetion has occuered that there is issue_id has to be there but when it goes to exception it doesn't throw the message instead of that it skips to next id, and without breaking the for loop.
+       
+  2. **An exception is thrown but all test cases will be passed.**
+        
+  For example-
+              
+           find_issue <- function(){
+              for (i in 1:7) {
+                skip_to_next <- FALSE
+                tryCatch({
+                  issue <- get_bug(i)
+                  g1 <- issue$id
+                  print(issue)
+                  message("The issue id's are: ",g1)
+                },
+                  error = function(e) {
+                     skip_to_next <<- TRUE
+                     message(
+                       "id not found ", g1+1
+                    )
+                  }
+                )
+                if (skip_to_next) {
+                  next
+                }
+              }
+            }
+          find_issue()
+  In this example the exception has occurred that there is issue_id has to be there but when it goes to exception it throw the message that "id is not found" instead of that it skips to next id, and without breaking the for loop.
+  
+  3. **I/O**: In this, an exception which will be thrown as output for an input.
 
-2. **Addition of visualizations**: For the section, **Common Queries**:
-    1. Time-series, bar graphs which would be visualized which will make it more handy to keep a track on the **Bugs reported in the last 24 hours | last 7 days** and **Bugs changed in the last 24 hours | last 7 days**
+  For example-
 
-3. Section **2.4.4. Life Cycle of a Bug** the link for diagram file does not redirect to image file.
+      find_issue <- function(){
+        base_url <- "https://bugs.r-project.org/bugzilla/show_bug.cgi?id="
+        for (i in 1:7) {
+          skip_to_next <- FALSE
+          tryCatch({
+            issue <- get_bug(i)
+            g1 <- issue$id
+            browseURL(paste(c(base_url, i), collapse = ""))
+            message("The issue id's are: ",g1)
+          },
+          error = function(e) {
+            skip_to_next <<- TRUE
+            message(
+              "id not found ", g1+1
+            )
+          }
+          )
+          if (skip_to_next) {
+            next
+          }
+        }
+      }
+      
+      find_issue()
+
+In this example the exception has occurred that there is issue_id has to be there but when it goes to exception it throw the message that "id is not found with issue id" instead of that it skips to next id, and without breaking the for loop and redirect to the url to the corresponding issue_id.
