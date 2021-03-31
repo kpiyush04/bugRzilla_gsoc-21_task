@@ -15,7 +15,7 @@
           
   2. **Analysis**: For Analysis there should be a fault injection. In this basically two scenarios can be arise like:
        
-        1. **No exception is thrown but all test cases will be passed.**
+         1. **No exception is thrown but all test cases will be passed.**
             
    For example-
               
@@ -41,7 +41,7 @@
           
   In this example the excetion has occuered that there is issue_id has to be there but when it goes to exception it doesn't throw the message instead of that it skips to next id, and without breaking the for loop.
        
-  2. **An exception is thrown but all test cases will be passed.**
+       2. **An exception is thrown but all test cases will be passed.**
         
   For example-
               
