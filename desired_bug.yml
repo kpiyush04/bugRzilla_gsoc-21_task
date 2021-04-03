@@ -1,0 +1,36 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://bugs.r-project.org/bugzilla/rest/bug?id=696
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Thu, 01 Apr 2021 22:39:00 GMT
+      server: gazelle
+      etag: 6qryG4g97d6ysLoy7eaBhg
+      content-length: '896'
+      content-type: application/json; charset=UTF-8
+      access-control-allow-headers: accept, content-type, origin, user-agent, x-requested-with,
+        x-bugzilla-token, x-bugzilla-password, x-bugzilla-login, x-bugzilla-api-key
+      access-control-allow-origin: '*'
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: 1; mode=block
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"bugs":[{"url":"","platform":"All","dupe_of":null,"cc_detail":[],"is_creator_accessible":true,"op_sys":"Linux","status":"CLOSED","is_cc_accessible":true,"alias":[],"target_milestone":"---","severity":"normal","is_confirmed":true,"classification":"Unclassified","blocks":[],"depends_on":[],"see_also":[],"creator":"jitterbug-import","keywords":[],"assigned_to":"jitterbug-import","flags":[],"creator_detail":{"name":"jitterbug-import","id":2,"real_name":"Jitterbug
+        compatibility account"},"qa_contact":"","creation_time":"2000-10-14T11:10:09Z","priority":"P5","summary":"sys.xxx
+        documentation","groups":[],"assigned_to_detail":{"real_name":"Jitterbug compatibility
+        account","id":2,"name":"jitterbug-import"},"id":696,"component":"Documentation","product":"R","version":"old","cc":[],"is_open":false,"whiteboard":"","resolution":"FIXED","deadline":null,"last_change_time":"2000-10-14T11:10:09Z"}]}'
+  recorded_at: 2021-04-01 22:39:00 GMT
+  recorded_with: vcr/0.6.0, webmockr/0.8.0
