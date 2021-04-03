@@ -1,101 +1,28 @@
 #### Task-3: Propose a plan (no need to provide code but it is welcomed as example, no need to run it) to analyze issues to learn how to make high quality issues: What questions would be interesting? How would you answer them? (Critical thinking and independence)
 
- > Taking few parameters under-consideration that should be used to analyze issues to learn how to make high quality issues:
+ > Taking few parameters under-consideration after going through the database that should be used to analyze issues to learn how to make high quality issues:
 
-  1. **Installation**: Whenever one install a package, so at the very beginning the package throws an warning. Whenever someone tries to install the package due to some reason if the package gets broke so in that situation Exception handling arises. This can be done using tryCatch() function. 
+  There are various factors which can be taken under-consideration to make high quality issues for R-Core and new contributors like:
+  
+  There are many things which needs to be consider to make a good high quality issue. The motive of this task is to what makes a good bug  report is also useful to help future users of bugRzilla write good issues and needed to know bugs more likely to be closed by the R-core without improving R and which are more likely to be well received.
+  
+  So, in order of that we have to check all the **component** on which most of the bug issues are created and then we have to look on the **Status** either the are (*closed, reopened, assigned and so on*). After checking these two factors next factor which has to be checked is the **Resolution** i.e. under which category it falls. So taking all these factors under-consideration we have to notify the R-Core members for the issue.
+  
+  In addition of it, we also want to encourage new contributors which can be done by checking the **Severity** and **Priority**. If the **Severity** is (*minor, normal, enhancement, so on*) then check the **Priority** if the less than P3 then assign the issue new contributors but if **Priority** is more or equal to P3 then send mail to R-core. But if the **Severity** is (*major, critical, blocker*) then it should be notified to R-Core.
   
   For example-
-          
-          try({
-          Message("Installation in Progress")
-          }), error = function(e){
-          Message("WARNING: installation failed.")
-          }
-  In this, if the package installs the successfully then it will throw the message "installation in Progress" but if somewhere package get breaks due to some lack of dependencies or some other reason then it should throw exception message i.e. "WARNING: installation failed."
-          
-  2. **Analysis**: For Analysis there should be a fault injection. In this basically two scenarios can be arise like:
-       
-        1. **No exception is thrown but all test cases will be passed.**
-            
-   For example-
-              
-           find_issue <- function(){
-              for (i in 1:7) {
-                skip_to_next <- FALSE
-                tryCatch({
-                  issue <- get_bug(i)
-                  g1 <- issue$id
-                  print(issue)
-                  message("The issue id's are: ",g1)
-                },
-                  error = function(e) {
-                    skip_to_next <<- TRUE
-                  }
-                )
-                if (skip_to_next) {
-                  next
-                }
-              }
-          }
-        find_issue()
-          
-  In this example the excetion has occuered that there is issue_id has to be there but when it goes to exception it doesn't throw the message instead of that it skips to next id, and without breaking the for loop.
-       
-  2. **An exception is thrown but all test cases will be passed.**
-        
-  For example-
-              
-           find_issue <- function(){
-              for (i in 1:7) {
-                skip_to_next <- FALSE
-                tryCatch({
-                  issue <- get_bug(i)
-                  g1 <- issue$id
-                  print(issue)
-                  message("The issue id's are: ",g1)
-                },
-                  error = function(e) {
-                     skip_to_next <<- TRUE
-                     message(
-                       "id not found ", g1+1
-                    )
-                  }
-                )
-                if (skip_to_next) {
-                  next
-                }
-              }
-            }
-          find_issue()
-  In this example the exception has occurred that there is issue_id has to be there but when it goes to exception it throw the message that "id is not found" instead of that it skips to next id, and without breaking the for loop.
-  
-  3. **I/O**: In this, an exception which will be thrown as output for an input.
+    
+  **Wishlist**: This component are basically the addition of a new feature taking this under consideration this issue can be assigned to new contributors but taking few factors that which can be taken under-consideration for R-Core i.e. if **Priority** is more or equal to P3 and **Severity** (*critical, major, blocker*) then notify to the R-Core for the issue.
 
-  For example-
-
-      find_issue <- function(){
-        base_url <- "https://bugs.r-project.org/bugzilla/show_bug.cgi?id="
-        for (i in 1:7) {
-          skip_to_next <- FALSE
-          tryCatch({
-            issue <- get_bug(i)
-            g1 <- issue$id
-            browseURL(paste(c(base_url, i), collapse = ""))
-            message("The issue id's are: ",g1)
-          },
-          error = function(e) {
-            skip_to_next <<- TRUE
-            message(
-              "id not found ", g1+1
-            )
-          }
-          )
-          if (skip_to_next) {
-            next
-          }
-        }
+    issue <- get_but(1)
+    comp <- issue$component
+    if (comp = "wishlist"){
+      prio <- issue$priority
+      g1 <- issue$Severity
+      if ((g1 == "minor" | g1 == "mnormal" | g1 == "enhancementr") & (prio <- "P1" | prio <- "P2")){
+        message("can be assigned to new contributer")
       }
-      
-      find_issue()
-
-In this example the exception has occurred that there is issue_id has to be there but when it goes to exception it throw the message that "id is not found with issue id" instead of that it skips to next id, and without breaking the for loop and redirect to the url to the corresponding issue_id.
+      if ((g1 == "critical" | g1 == "major" | g1 == "blocker") & (prio <- "P3" | prio <- "P4" | prio <- "P5")){
+        message("notifiying to R-Core")
+      }
+    }
