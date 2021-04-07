@@ -1,7 +1,11 @@
 http_interactions:
 - request:
     method: get
+<<<<<<< HEAD
     uri: https://bugs.r-project.org/bugzilla/rest/bug?id=1
+=======
+    uri: https://bugs.r-project.org/bugzilla/rest/bug?id=696
+>>>>>>> 4a5d8333c8edf0735eb421b62f48305327130aaf
     body:
       encoding: ''
       string: ''
@@ -14,6 +18,7 @@ http_interactions:
       reason: OK
       message: 'Success: (200) OK'
     headers:
+<<<<<<< HEAD
       date: Wed, 07 Apr 2021 22:28:02 GMT
       server: gazelle
       etag: u9fQE3JOsnn/El1nYWx6qw
@@ -158,6 +163,12 @@ http_interactions:
       server: gazelle
       etag: ieLsscfbricP4cj4Xm4NJg
       content-length: '904'
+=======
+      date: Thu, 01 Apr 2021 22:39:00 GMT
+      server: gazelle
+      etag: 6qryG4g97d6ysLoy7eaBhg
+      content-length: '896'
+>>>>>>> 4a5d8333c8edf0735eb421b62f48305327130aaf
       content-type: application/json; charset=UTF-8
       access-control-allow-headers: accept, content-type, origin, user-agent, x-requested-with,
         x-bugzilla-token, x-bugzilla-password, x-bugzilla-login, x-bugzilla-api-key
@@ -168,6 +179,7 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
+<<<<<<< HEAD
       string: '{"bugs":[{"product":"R","version":"old","cc":[],"is_open":false,"whiteboard":"","resolution":"FIXED","deadline":null,"last_change_time":"1998-08-18T02:44:49Z","assigned_to":"jitterbug-import","flags":[],"creator_detail":{"name":"jitterbug-import","id":2,"real_name":"Jitterbug
         compatibility account"},"creation_time":"1998-08-13T14:30:36Z","qa_contact":"","priority":"P5","summary":"row.names<-
         is incompatible with S","groups":[],"assigned_to_detail":{"real_name":"Jitterbug
@@ -240,4 +252,11 @@ http_interactions:
         compatibility account"},"id":7,"component":"System-specific","assigned_to":"jitterbug-import","flags":[],"qa_contact":"","creation_time":"1998-08-17T05:41:33Z","creator_detail":{"real_name":"Jitterbug
         compatibility account","id":2,"name":"jitterbug-import"},"last_change_time":"1998-08-17T20:58:15Z","version":"old","cc":[],"is_open":false,"product":"R","deadline":null,"whiteboard":"","resolution":"FIXED","op_sys":"Other","is_cc_accessible":true,"alias":[],"status":"CLOSED","cc_detail":[],"is_creator_accessible":true,"is_confirmed":true,"severity":"normal","classification":"Unclassified","target_milestone":"---","url":"","dupe_of":null,"platform":"All","depends_on":[],"keywords":[],"creator":"jitterbug-import","see_also":[],"blocks":[]}]}'
   recorded_at: 2021-04-07 22:28:05 GMT
+=======
+      string: '{"bugs":[{"url":"","platform":"All","dupe_of":null,"cc_detail":[],"is_creator_accessible":true,"op_sys":"Linux","status":"CLOSED","is_cc_accessible":true,"alias":[],"target_milestone":"---","severity":"normal","is_confirmed":true,"classification":"Unclassified","blocks":[],"depends_on":[],"see_also":[],"creator":"jitterbug-import","keywords":[],"assigned_to":"jitterbug-import","flags":[],"creator_detail":{"name":"jitterbug-import","id":2,"real_name":"Jitterbug
+        compatibility account"},"qa_contact":"","creation_time":"2000-10-14T11:10:09Z","priority":"P5","summary":"sys.xxx
+        documentation","groups":[],"assigned_to_detail":{"real_name":"Jitterbug compatibility
+        account","id":2,"name":"jitterbug-import"},"id":696,"component":"Documentation","product":"R","version":"old","cc":[],"is_open":false,"whiteboard":"","resolution":"FIXED","deadline":null,"last_change_time":"2000-10-14T11:10:09Z"}]}'
+  recorded_at: 2021-04-01 22:39:00 GMT
+>>>>>>> 4a5d8333c8edf0735eb421b62f48305327130aaf
   recorded_with: vcr/0.6.0, webmockr/0.8.0
