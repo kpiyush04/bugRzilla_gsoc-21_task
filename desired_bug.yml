@@ -1,7 +1,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://bugs.r-project.org/bugzilla/rest/bug?id=696
+    uri: https://bugs.r-project.org/bugzilla/rest/bug?id=1
     body:
       encoding: ''
       string: ''
@@ -14,10 +14,150 @@ http_interactions:
       reason: OK
       message: 'Success: (200) OK'
     headers:
-      date: Thu, 01 Apr 2021 22:39:00 GMT
+      date: Wed, 07 Apr 2021 22:28:02 GMT
       server: gazelle
-      etag: 6qryG4g97d6ysLoy7eaBhg
-      content-length: '896'
+      etag: u9fQE3JOsnn/El1nYWx6qw
+      content-length: '932'
+      content-type: application/json; charset=UTF-8
+      access-control-allow-headers: accept, content-type, origin, user-agent, x-requested-with,
+        x-bugzilla-api-key, x-bugzilla-login, x-bugzilla-token, x-bugzilla-password
+      access-control-allow-origin: '*'
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: 1; mode=block
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"bugs":[{"last_change_time":"2018-01-16T16:21:14Z","cc":["simon.urbanek"],"is_open":false,"version":"R
+        2.y.z","product":"R","deadline":null,"resolution":"FIXED","whiteboard":"","groups":[],"summary":"Test
+        bug report - summary","priority":"P5","component":"Misc","id":1,"assigned_to_detail":{"id":1,"name":"admin","real_name":"Simon
+        Urbanek"},"flags":[],"assigned_to":"admin","creation_time":"2010-02-15T18:29:54Z","qa_contact":"","creator_detail":{"real_name":"Simon
+        Urbanek","id":1,"name":"admin"},"depends_on":[15763,15764,15862],"keywords":[],"creator":"admin","see_also":[],"blocks":[],"status":"CLOSED","is_cc_accessible":true,"alias":[],"op_sys":"Mac
+        OS X v10.4","is_creator_accessible":true,"cc_detail":[{"name":"simon.urbanek","id":5,"real_name":"Simon
+        Urbanek"}],"classification":"Unclassified","is_confirmed":true,"severity":"normal","target_milestone":"---","url":"http://url.com/","platform":"PowerPC","dupe_of":null}]}'
+  recorded_at: 2021-04-07 22:28:05 GMT
+  recorded_with: vcr/0.6.0, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://bugs.r-project.org/bugzilla/rest/bug?id=2
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Wed, 07 Apr 2021 22:28:03 GMT
+      server: gazelle
+      etag: pMWo7bbXHLt7aRw/o6a9Hw
+      content-length: '11'
+      content-type: application/json; charset=UTF-8
+      access-control-allow-headers: accept, content-type, origin, user-agent, x-requested-with,
+        x-bugzilla-api-key, x-bugzilla-token, x-bugzilla-password, x-bugzilla-login
+      access-control-allow-origin: '*'
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: 1; mode=block
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"bugs":[]}'
+  recorded_at: 2021-04-07 22:28:05 GMT
+  recorded_with: vcr/0.6.0, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://bugs.r-project.org/bugzilla/rest/bug?id=3
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Wed, 07 Apr 2021 22:28:03 GMT
+      server: gazelle
+      etag: r0w4Z5uEq6JIpJoAzVg7RQ
+      content-length: '936'
+      content-type: application/json; charset=UTF-8
+      access-control-allow-headers: accept, content-type, origin, user-agent, x-requested-with,
+        x-bugzilla-password, x-bugzilla-token, x-bugzilla-login, x-bugzilla-api-key
+      access-control-allow-origin: '*'
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: 1; mode=block
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"bugs":[{"deadline":null,"resolution":"FIXED","whiteboard":"","cc":[],"is_open":false,"version":"old","product":"R","last_change_time":"1998-08-10T02:50:29Z","creation_time":"1998-08-08T03:25:05Z","qa_contact":"","creator_detail":{"real_name":"Jitterbug
+        compatibility account","id":2,"name":"jitterbug-import"},"flags":[],"assigned_to":"jitterbug-import","component":"Language","assigned_to_detail":{"real_name":"Jitterbug
+        compatibility account","id":2,"name":"jitterbug-import"},"id":3,"groups":[],"summary":"[Prof
+        Brian Ripley <ripley@stats.ox.ac.uk>] ... matching (still a bug)","priority":"P5","blocks":[],"keywords":[],"creator":"jitterbug-import","see_also":[],"depends_on":[],"platform":"All","dupe_of":null,"url":"","classification":"Unclassified","is_confirmed":true,"severity":"normal","target_milestone":"---","status":"CLOSED","is_cc_accessible":true,"alias":[],"op_sys":"All","is_creator_accessible":true,"cc_detail":[]}]}'
+  recorded_at: 2021-04-07 22:28:05 GMT
+  recorded_with: vcr/0.6.0, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://bugs.r-project.org/bugzilla/rest/bug?id=4
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Wed, 07 Apr 2021 22:28:03 GMT
+      server: gazelle
+      etag: rENqmYjZBUuahe6R34Ctnw
+      content-length: '908'
+      content-type: application/json; charset=UTF-8
+      access-control-allow-headers: accept, content-type, origin, user-agent, x-requested-with,
+        x-bugzilla-api-key, x-bugzilla-login, x-bugzilla-token, x-bugzilla-password
+      access-control-allow-origin: '*'
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: 1; mode=block
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"bugs":[{"blocks":[],"depends_on":[],"keywords":[],"creator":"jitterbug-import","see_also":[],"url":"","dupe_of":null,"platform":"All","alias":[],"is_cc_accessible":true,"status":"CLOSED","op_sys":"Solaris","is_creator_accessible":true,"cc_detail":[],"classification":"Unclassified","severity":"normal","is_confirmed":true,"target_milestone":"---","is_open":false,"cc":[],"version":"old","product":"R","deadline":null,"resolution":"FIXED","whiteboard":"","last_change_time":"1998-08-10T20:23:26Z","flags":[],"assigned_to":"jitterbug-import","creation_time":"1998-08-10T20:23:26Z","qa_contact":"","creator_detail":{"id":2,"name":"jitterbug-import","real_name":"Jitterbug
+        compatibility account"},"groups":[],"summary":"aov(y ~ 0)  should work {g}lm(....)
+        does","priority":"P5","component":"Models","id":4,"assigned_to_detail":{"real_name":"Jitterbug
+        compatibility account","name":"jitterbug-import","id":2}}]}'
+  recorded_at: 2021-04-07 22:28:05 GMT
+  recorded_with: vcr/0.6.0, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://bugs.r-project.org/bugzilla/rest/bug?id=5
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Wed, 07 Apr 2021 22:28:04 GMT
+      server: gazelle
+      etag: ieLsscfbricP4cj4Xm4NJg
+      content-length: '904'
       content-type: application/json; charset=UTF-8
       access-control-allow-headers: accept, content-type, origin, user-agent, x-requested-with,
         x-bugzilla-token, x-bugzilla-password, x-bugzilla-login, x-bugzilla-api-key
@@ -28,9 +168,76 @@ http_interactions:
     body:
       encoding: UTF-8
       file: no
-      string: '{"bugs":[{"url":"","platform":"All","dupe_of":null,"cc_detail":[],"is_creator_accessible":true,"op_sys":"Linux","status":"CLOSED","is_cc_accessible":true,"alias":[],"target_milestone":"---","severity":"normal","is_confirmed":true,"classification":"Unclassified","blocks":[],"depends_on":[],"see_also":[],"creator":"jitterbug-import","keywords":[],"assigned_to":"jitterbug-import","flags":[],"creator_detail":{"name":"jitterbug-import","id":2,"real_name":"Jitterbug
-        compatibility account"},"qa_contact":"","creation_time":"2000-10-14T11:10:09Z","priority":"P5","summary":"sys.xxx
-        documentation","groups":[],"assigned_to_detail":{"real_name":"Jitterbug compatibility
-        account","id":2,"name":"jitterbug-import"},"id":696,"component":"Documentation","product":"R","version":"old","cc":[],"is_open":false,"whiteboard":"","resolution":"FIXED","deadline":null,"last_change_time":"2000-10-14T11:10:09Z"}]}'
-  recorded_at: 2021-04-01 22:39:00 GMT
+      string: '{"bugs":[{"product":"R","version":"old","cc":[],"is_open":false,"whiteboard":"","resolution":"FIXED","deadline":null,"last_change_time":"1998-08-18T02:44:49Z","assigned_to":"jitterbug-import","flags":[],"creator_detail":{"name":"jitterbug-import","id":2,"real_name":"Jitterbug
+        compatibility account"},"creation_time":"1998-08-13T14:30:36Z","qa_contact":"","priority":"P5","summary":"row.names<-
+        is incompatible with S","groups":[],"assigned_to_detail":{"real_name":"Jitterbug
+        compatibility account","id":2,"name":"jitterbug-import"},"id":5,"component":"Language","blocks":[],"depends_on":[],"see_also":[],"creator":"jitterbug-import","keywords":[],"url":"","dupe_of":null,"platform":"All","cc_detail":[],"is_creator_accessible":true,"op_sys":"Solaris","status":"CLOSED","is_cc_accessible":true,"alias":[],"target_milestone":"---","is_confirmed":true,"severity":"normal","classification":"Unclassified"}]}'
+  recorded_at: 2021-04-07 22:28:05 GMT
+  recorded_with: vcr/0.6.0, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://bugs.r-project.org/bugzilla/rest/bug?id=6
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Wed, 07 Apr 2021 22:28:04 GMT
+      server: gazelle
+      etag: pMWo7bbXHLt7aRw/o6a9Hw
+      content-length: '11'
+      content-type: application/json; charset=UTF-8
+      access-control-allow-headers: accept, content-type, origin, user-agent, x-requested-with,
+        x-bugzilla-login, x-bugzilla-token, x-bugzilla-password, x-bugzilla-api-key
+      access-control-allow-origin: '*'
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: 1; mode=block
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"bugs":[]}'
+  recorded_at: 2021-04-07 22:28:05 GMT
+  recorded_with: vcr/0.6.0, webmockr/0.8.0
+- request:
+    method: get
+    uri: https://bugs.r-project.org/bugzilla/rest/bug?id=7
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      date: Wed, 07 Apr 2021 22:28:05 GMT
+      server: gazelle
+      etag: g+c3VpOPfl1y9T2lUebGrQ
+      content-length: '897'
+      content-type: application/json; charset=UTF-8
+      access-control-allow-headers: accept, content-type, origin, user-agent, x-requested-with,
+        x-bugzilla-password, x-bugzilla-token, x-bugzilla-login, x-bugzilla-api-key
+      access-control-allow-origin: '*'
+      x-content-type-options: nosniff
+      x-frame-options: SAMEORIGIN
+      x-xss-protection: 1; mode=block
+    body:
+      encoding: UTF-8
+      file: no
+      string: '{"bugs":[{"groups":[],"priority":"P5","summary":"plot() hangs on DU
+        4.0","assigned_to_detail":{"name":"jitterbug-import","id":2,"real_name":"Jitterbug
+        compatibility account"},"id":7,"component":"System-specific","assigned_to":"jitterbug-import","flags":[],"qa_contact":"","creation_time":"1998-08-17T05:41:33Z","creator_detail":{"real_name":"Jitterbug
+        compatibility account","id":2,"name":"jitterbug-import"},"last_change_time":"1998-08-17T20:58:15Z","version":"old","cc":[],"is_open":false,"product":"R","deadline":null,"whiteboard":"","resolution":"FIXED","op_sys":"Other","is_cc_accessible":true,"alias":[],"status":"CLOSED","cc_detail":[],"is_creator_accessible":true,"is_confirmed":true,"severity":"normal","classification":"Unclassified","target_milestone":"---","url":"","dupe_of":null,"platform":"All","depends_on":[],"keywords":[],"creator":"jitterbug-import","see_also":[],"blocks":[]}]}'
+  recorded_at: 2021-04-07 22:28:05 GMT
   recorded_with: vcr/0.6.0, webmockr/0.8.0
