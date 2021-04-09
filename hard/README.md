@@ -27,7 +27,7 @@ For example-
     if (comp = "wishlist"){
       prio <- issue$priority
       g1 <- issue$Severity
-      if ((g1 == "minor" | g1 == "mnormal" | g1 == "enhancementr") & (prio <- "P1" | prio <- "P2")){
+      if ((g1 == "minor" | g1 == "normal" | g1 == "enhancementr") & (prio <- "P1" | prio <- "P2")){
         message("Less important!!")
       }
       if ((g1 == "critical" | g1 == "major" | g1 == "blocker") & (prio <- "P3" | prio <- "P4" | prio <- "P5")){
