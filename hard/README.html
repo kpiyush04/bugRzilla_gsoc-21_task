@@ -170,24 +170,30 @@ pre code {
 <div id="task-3-propose-a-plan-no-need-to-provide-code-but-it-is-welcomed-as-example-no-need-to-run-it-to-analyze-issues-to-learn-how-to-make-high-quality-issues-what-questions-would-be-interesting-how-would-you-answer-them-critical-thinking-and-independence" class="section level4">
 <h4>Task-3: Propose a plan (no need to provide code but it is welcomed as example, no need to run it) to analyze issues to learn how to make high quality issues: What questions would be interesting? How would you answer them? (Critical thinking and independence)</h4>
 <blockquote>
-<p>Taking few parameters under-consideration after going through the database that should be used to analyze issues to learn how to make high quality issues:</p>
+<p>Taking a few parameters under consideration after going through the database that should be used to analyze issues to learn how to make high-quality issues:</p>
 </blockquote>
-<p>There are various factors which can be taken under-consideration to make high quality issues for R-Core and new contributors like:</p>
-<p>There are many things which needs to be consider to make a good high quality issue. The motive of this task is to what makes a good bug report is also useful to help future users of bugRzilla write good issues and needed to know bugs more likely to be closed by the R-core without improving R and which are more likely to be well received.</p>
-<p>So, in order of that we have to check all the <strong>component</strong> on which most of the bug issues are created and then we have to look on the <strong>Status</strong> either the are (<em>closed, reopened, assigned and so on</em>). After checking these two factors next factor which has to be checked is the <strong>Resolution</strong> i.e. under which category it falls. So taking all these factors under-consideration we have to notify the R-Core members for the issue.</p>
-<p>In addition of it, we also want to encourage new contributors which can be done by checking the <strong>Severity</strong> and <strong>Priority</strong>. If the <strong>Severity</strong> is (<em>minor, normal, enhancement, so on</em>) then check the <strong>Priority</strong> if the less than P3 then assign the issue new contributors but if <strong>Priority</strong> is more or equal to P3 then send mail to R-core. But if the <strong>Severity</strong> is (<em>major, critical, blocker</em>) then it should be notified to R-Core.</p>
+<p>Various factors can be taken under consideration to make high-quality issues for R-Core and new contributors like:</p>
+<p>There are many things which need to be considered to make a good high-quality issue. The motive of this task is to what makes a good bug report is also useful to help future users of bugRzilla write good issues and needed to know bugs more likely to be closed by the R-core without improving R and which are more likely to be well received.</p>
+<p>So, in order of that, we have to check all the ** components** on which most of the bug issues are created and then we have to look on the <strong>Status</strong> either the are (<em>closed, reopened, assigned, and so on</em>). After checking these two factors next factor which has to be checked is the <strong>Resolution</strong> i.e. under which category it falls. So taking all these factors under consideration we have to notify the R-Core members of the issue.</p>
+<p>Also, we want to encourage new contributors which can be done by checking the <strong>Severity</strong> and <strong>Priority</strong>. If the <strong>Severity</strong> is (<em>minor, normal, enhancement, so on</em>) then check the <strong>Priority</strong> if the less than P3 then assign the issue new contributors but if <strong>Priority</strong> is more or equal to P3 then send mail to R-core. But if the <strong>Severity</strong> is (<em>major, critical, blocker</em>) then it should be notified to R-Core.</p>
 <p>For example-</p>
-<p><strong>Wishlist</strong>: This component are basically the addition of a new feature taking this under consideration this issue can be assigned to new contributors but taking few factors that which can be taken under-consideration for R-Core i.e. if <strong>Priority</strong> is more or equal to P3 and <strong>Severity</strong> (<em>critical, major, blocker</em>) then notify to the R-Core for the issue.</p>
+<ol style="list-style-type: decimal">
+<li><strong>Component</strong>- We can create a bar graph and pie chats category wise to check on which category most of the issues are being created. Which will help us to know on which category more focus has to be given.</li>
+<li><strong>Changed</strong>- In this, we can plot Time Series line graphs for reported and modified time. As well as, making it enable to see the plots for a 24 hours, a week, a month, and so on.</li>
+<li><strong>Tabular Reports</strong>- The example discussed above, we can extract the data for visualization.</li>
+</ol>
+<p>For example-</p>
+<p><strong>Wishlist</strong>: This component is the addition of a new feature taking this under consideration this issue can be assigned to new contributors but taking few factors that can be taken under-consideration for R-Core i.e. if <strong>Priority</strong> is more or equal to P3 and <strong>Severity</strong> (<em>critical, major, blocker</em>) then notify to the R-Core for the issue.</p>
 <pre><code>issue &lt;- get_but(1)
 comp &lt;- issue$component
 if (comp = &quot;wishlist&quot;){
   prio &lt;- issue$priority
   g1 &lt;- issue$Severity
   if ((g1 == &quot;minor&quot; | g1 == &quot;mnormal&quot; | g1 == &quot;enhancementr&quot;) &amp; (prio &lt;- &quot;P1&quot; | prio &lt;- &quot;P2&quot;)){
-    message(&quot;can be assigned to new contributer&quot;)
+    message(&quot;Less important!!&quot;)
   }
   if ((g1 == &quot;critical&quot; | g1 == &quot;major&quot; | g1 == &quot;blocker&quot;) &amp; (prio &lt;- &quot;P3&quot; | prio &lt;- &quot;P4&quot; | prio &lt;- &quot;P5&quot;)){
-    message(&quot;notifiying to R-Core&quot;)
+    message(&quot;Important!!&quot;)
   }
 }</code></pre>
 </div>

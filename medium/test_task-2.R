@@ -1,30 +1,17 @@
+# importing testthat library
 library(testthat)
-library(vcr)
-library(curl)
+
+# importing the file on which test has to be done
+source("medium/Task-2.R")
 
 test_that("desired_bugissue works", {
-  vcr::use_cassette("desired_bug", {
-    bug <- list()
-    for (i in 1:7) {
-      skip_to_next <- FALSE
-      tryCatch({
-        issue <- get_bug(i)
-        df <- tibble(
-          ID = issue$id
-        )
-        n_rows <- nrow(df)
-      },
-      error = function(e) {
-        skip_to_next <<- TRUE
-      }
-      )
-      if (skip_to_next) {
-        next
-      }
-      temp <- df[seq.int(from = n_rows, by = -1L, length.out = n_rows), ]
-      bug <- c(bug, temp)
-    }
-    t1 <- desired_bug(sample(bug,1))
-  })
-  expect_type(t1, "NULL")
+  # characterizing a base URL that will be linked with bug_id to divert to the program
+  base_url <- "https://bugs.r-project.org/bugzilla/show_bug.cgi?id="
+  
+  # taking a for loop form 0 to 7 and 
+  for (i in 0:7) {
+    # calling the desired_bug function from 0 to 7 which is taking two formal augments i.e. base_url and considering i as bug_id
+    t1 <- desired_bug(base_url, i) 
+  }
+  expect_equal(paste0(base_url), "https://bugs.r-project.org/bugzilla/show_bug.cgi?id=")
 })
